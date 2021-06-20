@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ngx-selected-filter": [
+        "dist/ngx-selected-filter"
+      ],
+      "ngx-selected-filter/*": [
+        "dist/ngx-selected-filter/*"
+      ]
+    }
   }
 }
