@@ -46,7 +46,7 @@ export class NgxSelectedFilterService {
     }
 
     private getOptions(selectElement: any) {
-        return selectElement.options;
+        return selectElement.options || [];
     }
 
     private hasDefaultValue(key: string) {
