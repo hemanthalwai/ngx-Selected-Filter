@@ -1,5 +1,5 @@
 import { AfterContentInit, Directive, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
-import { NgxSelectedFilterService } from './ngx-selected-filter.service';
+import { NgxSelectedFilterService } from '../services/ngx-selected-filter.service';
 import { SelectedFilterDirective } from './selected-filter.directive';
 
 @Directive({

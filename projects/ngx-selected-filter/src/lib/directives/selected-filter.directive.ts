@@ -1,5 +1,5 @@
 import { AfterViewInit, Directive, ElementRef, HostListener, Input, OnDestroy, OnInit } from '@angular/core';
-import { NgxSelectedFilterService } from './ngx-selected-filter.service';
+import { NgxSelectedFilterService } from '../services/ngx-selected-filter.service';
 
 @Directive({
   selector: '[selectedFilter]'
