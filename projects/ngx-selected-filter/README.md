@@ -1,3 +1,4 @@
+
 <!--
 
 *** Thanks for checking out the Best-README-Template. If you have a suggestion
@@ -29,131 +30,54 @@
 *** https://www.markdownguide.org/basic-syntax/#reference-style-links
 
 -->
+<div align="center">
+
+
 [![Npm version][npm-package-badge]][npm-package-url]
-
-[![Contributors][contributors-shield]][contributors-url]
-
-[![Forks][forks-shield]][forks-url]
-
-[![Stargazers][stars-shield]][stars-url]
-
-[![Issues][issues-shield]][issues-url]
 
 [![MIT License][license-shield]][license-url]
 
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
-  
-  
-  
+</div>  
 
-<!-- PROJECT LOGO -->
-
-<br  />
-
-<p  align="center">
-
-<a  href="https://github.com/othneildrew/Best-README-Template">
-
-<img  src="images/logo.png"  alt="Logo"  width="80"  height="80">
-
-</a>
-
-  
-
-<h3  align="center">Best-README-Template</h3>
+<h3  align="center">Ngx-Selected-FIlter</h3>
 
   
 
 <p  align="center">
 
-An awesome README template to jumpstart your projects!
-
 <br  />
 
-<a  href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
-
-<br  />
-
-<br  />
-
-<a  href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-
-·
-
-<a  href="https://github.com/hemanthalwai/ngx-Selected-Filter/issues">Report Bug</a>
-
-·
-
-<a  href="https://github.com/hemanthalwai/ngx-Selected-Filter/issues">Request Feature</a>
+<a  target="_blank" href="https://stackblitz.com/edit/angular-fgbctn?file=src%2Fapp%2Fapp.component.html">View Demo</a>
 
 </p>
 
 </p>
-
-  
-  
-  
 
 <!-- TABLE OF CONTENTS -->
+### Table of Contents
+   - [About the project](#about-the-project)
+     - [Built with](##built-with)
+     - [Dependencies](##dependencies)
+   - [Usage](#usage)
+     - [Installation](##installation)
+     - [Setup](##setup)
+   - [Options](#options)
+   - [Contributing](##contributing)
+   - [License](##license)
+   - [Contact](##contact)
 
-<details  open="open">
-
-<summary>Table of Contents</summary>
-
-<ol>
-
-<li>
-
-<a  href="#about-the-project">About The Project</a>
-
-<ul>
-
-<li><a  href="#built-with">Built With</a></li>
-
-</ul>
-
-</li>
-
-<li>
-
-<a  href="#getting-started">Getting Started</a>
-
-<ul>
-
-<li><a  href="#prerequisites">Prerequisites</a></li>
-
-<li><a  href="#installation">Installation</a></li>
-
-</ul>
-
-</li>
-
-<li><a  href="#usage">Usage</a></li>
-
-<li><a  href="#contributing">Contributing</a></li>
-
-<li><a  href="#license">License</a></li>
-
-<li><a  href="#contact">Contact</a></li>
-
-</ol>
-
-</details>
-
-  
-  
-  
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
   
-There are multiple scenarios where a dropdown option needs to be filtered based on the previous selected values.
-This scenario needs to be implemented with a custom code using the OnModelChange or onChange event to loop through the selected dropdowns and remove them from the other dropdown options.
+- There are multiple scenarios where a dropdown option needs to be filtered based on the previous selected values i.e each dropdown option can be selected at most once.
+- This scenario needs to be implemented with a custom code using the OnModelChange or onChange event to loop through the selected dropdowns and remove them from the other dropdown options.
 
-This project targets to remove this custom code to achieve the above mentioned functionality by exporting 2 directives (selectedFilterScope and selectedFilter)
+- This project targets to remove this custom code to achieve the above mentioned functionality by exporting 2 directives (selectedFilterScope and selectedFilter)
   
 
 ### Built With
@@ -175,18 +99,6 @@ Following are the packages with versions used to create this library
 | 1.X                   | >=10.X      |    
 
 
-
-<!-- GETTING STARTED -->
-
-## Getting Started
-
-  
-
-This is an example of how you may give instructions on setting up your project locally.
-
-To get a local copy up and running follow these simple example steps.
-
-  
 <!-- USAGE EXAMPLES -->
 
 ## Usage
@@ -199,14 +111,14 @@ npm install ngx-selected-filter --save
 
 ### Setup
 
-Step 1:
+**Step 1:**
 
 Import NgxSelectedFilterModule in your project's modules
 ```
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import {NgxSelectedFilterModule} from 'ngx-test-selected-filter';
+import {NgxSelectedFilterModule} from 'ngx-selected-filter';
 
 @NgModule({
   declarations: [
@@ -223,7 +135,7 @@ export class AppModule { }
 
 ```
 
-Step 2:
+**Step 2:**
 
 Add `selectedFilterScope` directive at the root level of your dropdown.
 This root level can be any HTML element which is a parent in heirarchy level w.r.t this select element.
@@ -243,7 +155,7 @@ This root level can be any HTML element which is a parent in heirarchy level w.r
 </div>
 ```
 
-Step 3:
+**Step 3:**
 
 Add `selectedFilter` directive in the select tag, where filter functionality is expected. If filter is needed in multiple select tags, value of `name` attribute or any distinct string can be passed to this directive.
 
@@ -328,9 +240,9 @@ Project Link: [ngx-Selected-Filter](https://github.com/hemanthalwai/ngx-Selected
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[npm-package-badge]: https://badge.fury.io/js/ngx-test-selected-filter.svg?style=for-the-badge
+[npm-package-badge]: https://img.shields.io/badge/npm%20package-1.0.1-green?style=for-the-badge&logo=appveyor
 
-[npm-package-url]: https://www.npmjs.com/package/ngx-test-selected-filter
+[npm-package-url]: https://www.npmjs.com/package/ngx-selected-filter
 
 [contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
 
@@ -350,7 +262,7 @@ Project Link: [ngx-Selected-Filter](https://github.com/hemanthalwai/ngx-Selected
 
 [license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
 
-[license-url]: https://github.com/hemanthalwai/ngx-Selected-Filter/blob/master/LICENSE.txt
+[license-url]: https://github.com/hemanthalwai/ngx-Selected-Filter/blob/main/LICENSE
 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 

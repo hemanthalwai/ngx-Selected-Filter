@@ -18,7 +18,7 @@ export class SelectedFilterDirective implements OnInit, OnDestroy, AfterViewInit
               private filterService: NgxSelectedFilterService
               ) {
   }
-  // https://stackoverflow.com/questions/50582227/angular-6-library-shared-stylesheets
+
   private getValue(): any {
     return this.element.nativeElement.value || this.ngModel;
   }
