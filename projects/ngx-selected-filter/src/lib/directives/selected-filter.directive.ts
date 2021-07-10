@@ -19,8 +19,11 @@ export class SelectedFilterDirective implements OnInit, OnDestroy, AfterViewInit
               ) {
   }
 
+  public getNgModelValue() {
+    return this.ngModel;
+  }
   private getValue(): any {
-    return this.element.nativeElement.value || this.ngModel;
+    return this.getNgModelValue() || this.getNativeValue();
   }
 
   private getNativeValue(): any {
@@ -35,24 +38,19 @@ export class SelectedFilterDirective implements OnInit, OnDestroy, AfterViewInit
 
 
   private getDefaultValue(): string {
-    let temp = this.getValue();
-    if (!temp && this.element.nativeElement.options.length) {
-      temp = this.element.nativeElement.options[0].value;
-      this.ngModel = temp;
-    }
-    return temp;
+    return this.getNativeValue() || this.getNgModelValue();
   }
 
   ngOnInit(): void {
-    const defaultValue = this.getValue();
+    const defaultValue = this.getDefaultValue();
     this.id = this.id || this.DEFAULT_KEY;
     this.filterService.register(this.id, defaultValue);
     this.filterService.setClassName(this.id, this.filterClass);
   }
-
+// https://stackblitz.com/edit/angular-kwstk4?file=src%2Fapp%2Fapp.component.html
   ngAfterViewInit(): void {
     this.prevValue = this.getValue();
-    if (!this.getNativeValue()) {
+    if (!this.getNativeValue() || this.getNativeValue() != this.getNgModelValue()) {
       this.element.nativeElement.value = this.prevValue;
     }
     this.filterService.setValue(this.id, this.prevValue);

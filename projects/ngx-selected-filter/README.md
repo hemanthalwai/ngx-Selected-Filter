@@ -49,7 +49,7 @@
 
 <br  />
 
-<a  target="_blank" href="https://stackblitz.com/edit/angular-fgbctn?file=src%2Fapp%2Fapp.component.html">View Demo</a>
+<a  target="_blank" href="https://stackblitz.com/edit/angular-kwstk4?file=src%2Fapp%2Fapp.component.ts">View Demo</a>
 
 </p>
 
@@ -240,7 +240,7 @@ Project Link: [ngx-Selected-Filter](https://github.com/hemanthalwai/ngx-Selected
 
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[npm-package-badge]: https://img.shields.io/badge/npm%20package-1.0.1-green?style=for-the-badge&logo=appveyor
+[npm-package-badge]: https://img.shields.io/badge/npm%20package-1.0.2-green?style=for-the-badge&logo=appveyor
 
 [npm-package-url]: https://www.npmjs.com/package/ngx-selected-filter
 

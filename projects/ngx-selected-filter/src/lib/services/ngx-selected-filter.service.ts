@@ -69,6 +69,7 @@ export class NgxSelectedFilterService {
     private deallocate(key: string) {
         delete this.dictionary[key];
         delete this.defaultValueDictionary[key];
+        delete this.dictionaryClass[key];
     }
 
     setCleanValue(key: string, newValue: any, oldValue: any) {
@@ -88,11 +89,11 @@ export class NgxSelectedFilterService {
         }
     }
 
-    setValue(key: string, parsedValue: string) {
+    setValue(key: string, value: any) {
         if (this.dictionary[key] == null) {
             this.dictionary[key] = [];
         }
-        this.dictionary[key].push(parsedValue);
+        this.dictionary[key].push(this.getParsedValue(value));
     }
 
     removeValue(key: string, parsedValue: string) {
@@ -122,7 +123,8 @@ export class NgxSelectedFilterService {
             const parsedValue = this.getParsedValue(value);
             const index = this.dictionary[key].indexOf(parsedValue);
             this.dictionary[key].splice(index, 1);
-        } else {
+        }
+        if (this.dictionary[key].length === 0) {
             this.deallocate(key);
         }
     }
@@ -163,10 +165,7 @@ export class NgxSelectedFilterService {
         this.dictionaryClass[key] = className;
     }
 
-    removeClassName(key: string, className: string) {
-        if (!className) {
-            return;
-        }
+    removeClassName(key: string) {
         delete this.dictionaryClass[key];
     }
 
